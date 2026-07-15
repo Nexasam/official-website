@@ -11,7 +11,7 @@ export default function About() {
       <PageHero
         label="About Nexasam"
         title={<>We Are a Team of <span className="gradient-text">Builders</span></>}
-        subtitle="Founded in 2025, Nexasam has grown from a 3-person startup to a 50+ person global technology agency trusted by companies on every continent."
+        subtitle="Founded in 2025, Nexasam has grown from a small startup into a global technology agency trusted by companies across multiple countries."
       />
 
       {/* Story */}
@@ -22,9 +22,9 @@ export default function About() {
               <span className="section-label mb-4">Our Story</span>
               <h2 className="section-title mb-6">Built by Engineers, <span className="gradient-text">for Builders</span></h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-                <p>Nexasam was born out of frustration. Our founders — engineers who had worked at Google, Stripe, and Twilio — kept seeing the same problem: companies with great ideas couldn't find a technology partner they could truly trust.</p>
-                <p>So in 2012, we set out to build the agency we always wished existed. One with senior-only teams, radical transparency, and a genuine obsession with quality.</p>
-                <p>Today, we have delivered 250+ products across fintech, healthtech, e-commerce, and enterprise SaaS. Our clients range from seed-stage startups to Fortune 500 companies, and we are proud to say that 80% of them are still with us.</p>
+                <p>Nexasam started with a simple observation — too many businesses were struggling to find a technology partner that actually delivered. Not just code, but working products that solved real problems.</p>
+                <p>We founded Nexasam in 2025 with a clear focus: build reliable software for businesses that need it done right. No bloated processes, no handoffs to junior developers, no surprises at the finish line.</p>
+                <p>Since then, we have worked with businesses across fintech, e-commerce, and digital services — helping them launch faster, serve more customers, and build technology they can depend on.</p>
               </div>
               <div className="mt-8 space-y-3">
                 {['Senior-only engineering teams', 'Full code ownership transferred to you', 'Agile delivery with weekly demos', 'Post-launch support included'].map(item => (
@@ -43,10 +43,10 @@ export default function About() {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { label: 'Founded', value: '2012' },
-                { label: 'Team Size', value: '50+' },
-                { label: 'Countries', value: '15+' },
+                { label: 'Founded', value: '2025' },
+                { label: 'Countries', value: '5+' },
                 { label: 'Projects', value: '250+' },
+                { label: 'Satisfaction', value: '98%' },
               ].map((item, i) => (
                 <div key={i} className="card p-6 text-center">
                   <div className="font-display text-4xl font-bold gradient-text mb-1">{item.value}</div>

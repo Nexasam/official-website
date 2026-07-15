@@ -6,7 +6,7 @@ const reasons = [
   { icon: Award, title: 'Senior-Only Teams', desc: 'Every project is staffed with senior engineers and designers. No juniors on client work.' },
   { icon: Clock, title: 'On-Time Delivery', desc: 'We have a 96% on-time delivery rate. We set realistic timelines and stick to them.' },
   { icon: Shield, title: 'Enterprise Security', desc: 'Security-first development with SOC 2 compliance, penetration testing, and secure code reviews.' },
-  { icon: Globe, title: 'Global Delivery', desc: 'Distributed team across 15+ countries, providing 24/7 coverage and timezone flexibility.' },
+  { icon: Globe, title: 'Global Delivery', desc: 'Distributed team across 5+ countries, providing 24/7 coverage and timezone flexibility.' },
   { icon: Zap, title: 'Agile & Transparent', desc: 'Weekly demos, real-time project tracking, and full code ownership transferred to you.' },
   { icon: Users, title: 'Long-Term Partnership', desc: '80% of our clients have been with us for 3+ years. We grow with your business.' },
 ]

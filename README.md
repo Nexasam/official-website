@@ -4,6 +4,9 @@ Official company website for **Nexasam**, a software development and IT consulti
 
 ---
 
+
+______
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -24,6 +27,7 @@ Official company website for **Nexasam**, a software development and IT consulti
 ## Overview
 
 Nexasam is a full-featured marketing and portfolio website for a software agency. It showcases services, featured projects, client testimonials, team members, and a contact form — wrapped in a polished dark/light theme with smooth scroll-triggered animations throughout.
+
 
 ---
 

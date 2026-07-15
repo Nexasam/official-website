@@ -13,10 +13,10 @@ const WEB3FORMS_ACCESS_KEY = '119d7d50-8306-4cb0-bb61-1ddd2efa04cb'
 
 const services = [
   'Web Development', 'Mobile App', 'UI/UX Design', 'SaaS Development',
-  'E-commerce', 'Cloud & DevOps', 'AI Integration', 'IT Consulting',
+  'E-commerce', 'VTU Softwares', 'AI Integration', 'IT Consulting',
 ]
 
-const budgets = ['< $10k', '$10k – $25k', '$25k – $50k', '$50k – $100k', '$100k+']
+const budgets = ['$100 – $1k', '$1k – $5k', '$5k – $10k', '$10k – $25k', '$25k – $50k', '$50k – $100k', '$100k+']
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
@@ -136,13 +136,28 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 h-48 bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-dots opacity-50" />
-                <div className="text-center relative z-10">
-                  <MapPin className="w-8 h-8 text-brand-500 mx-auto mb-2" />
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Ibadan, Oyo State, Nigeria</p>
-                </div>
+              {/* Map */}
+              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
+                <iframe
+                  title="Nexasam Office Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.0!2d3.8960!3d7.3775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10398d08b7c00001%3A0x1!2sIdi-Osan+Street%2C+Gberemu%2C+Ibadan%2C+Oyo+State%2C+Nigeria!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <a
+                  href="https://maps.google.com/?q=Idi-Osan+Street,+Gberemu,+Ibadan,+Oyo+State,+Nigeria"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 text-sm text-brand-600 dark:text-brand-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                >
+                  <MapPin className="w-4 h-4 flex-shrink-0" />
+                  <span className="truncate">24, Idi-Osan Street, Gberemu, Ibadan</span>
+                  <span className="ml-auto text-xs text-gray-400 flex-shrink-0">Open in Maps →</span>
+                </a>
               </div>
             </motion.div>
 

@@ -105,8 +105,8 @@ export default function Hero() {
               {[
                 { value: '250+', label: 'Projects Delivered' },
                 { value: '98%', label: 'Client Satisfaction' },
-                { value: '12+', label: 'Years Experience' },
-                { value: '50+', label: 'Expert Engineers' },
+                { value: '5+', label: 'Countries Served' },
+                { value: '3+', label: 'Years Experience' },
               ].map((stat, i) => (
                 <motion.div
                   key={i}

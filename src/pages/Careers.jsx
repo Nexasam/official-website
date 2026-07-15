@@ -60,7 +60,7 @@ export default function Careers() {
             >
               {[
                 { value: '50+', label: 'Team Members' },
-                { value: '15+', label: 'Countries' },
+                { value: '5+', label: 'Countries' },
                 { value: '100%', label: 'Remote-Friendly' },
                 { value: '4.8★', label: 'Glassdoor Rating' },
               ].map((item, i) => (

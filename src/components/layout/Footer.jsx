@@ -5,19 +5,17 @@ const footerLinks = {
   Company: [
     { label: 'About Us', path: '/about' },
     { label: 'Careers', path: '/careers' },
-    { label: 'Blog', path: '/blog' },
     { label: 'Contact', path: '/contact' },
   ],
   Services: [
     { label: 'Web Development', path: '/services' },
     { label: 'Mobile Apps', path: '/services' },
     { label: 'UI/UX Design', path: '/services' },
-    { label: 'Cloud & DevOps', path: '/services' },
+    { label: 'VTU Softwares', path: '/services' },
     { label: 'AI Integrations', path: '/services' },
   ],
   Work: [
     { label: 'Portfolio', path: '/portfolio' },
-    { label: 'Case Studies', path: '/portfolio' },
     { label: 'Testimonials', path: '/' },
   ],
 }
@@ -26,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 transition-colors duration-300">
 
-      {/* Newsletter */}
+      {/* Newsletter — commented out until email integration is ready
       <div className="border-b border-gray-200 dark:border-gray-800">
         <div className="container-max px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -57,6 +55,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      */}
 
       {/* Main Footer */}
       <div className="container-max px-4 sm:px-6 lg:px-8 py-16">
