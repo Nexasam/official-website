@@ -6,7 +6,7 @@ import { blogPosts } from '../data'
 import CTABanner from '../components/home/CTABanner'
 import PageHero from '../components/layout/PageHero'
 
-const categories = ['All', 'Engineering', 'Design', 'AI & Technology', 'DevOps', 'Case Study']
+const categories = ['All', 'Engineering', 'Design', 'AI & Technology', 'Case Study']
 
 export default function Blog() {
   const [search, setSearch] = useState('')

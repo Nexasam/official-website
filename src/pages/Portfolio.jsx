@@ -5,7 +5,7 @@ import { projects } from '../data'
 import CTABanner from '../components/home/CTABanner'
 import PageHero from '../components/layout/PageHero'
 
-const categories = ['All', 'SaaS', 'Mobile', 'E-commerce', 'Web App', 'DevOps', 'AI']
+const categories = ['All', 'SaaS', 'Mobile', 'E-commerce', 'Web App', 'AI']
 
 export default function Portfolio() {
   const [active, setActive] = useState('All')
