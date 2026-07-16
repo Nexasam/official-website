@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { Mail, MapPin, Phone } from 'lucide-react'
 
 const footerLinks = {
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-6">
+            <Link href="/" className="flex items-center gap-2 mb-6">
               <img
                 src="/nx_fav(1).png"
                 alt="Nexasam N logo"
@@ -116,7 +116,7 @@ export default function Footer() {
                 {links.map(link => (
                   <li key={link.label}>
                     <Link
-                      to={link.path}
+                      href={link.path}
                       className="text-sm text-gray-500 dark:text-gray-400 hover:text-brand-600 dark:hover:text-white transition-colors hover:translate-x-1 inline-block"
                     >
                       {link.label}

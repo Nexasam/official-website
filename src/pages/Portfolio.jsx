@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ExternalLink, ArrowRight } from 'lucide-react'
 import { projects } from '../data'
@@ -144,7 +144,7 @@ export default function Portfolio() {
                     </div>
                   ))}
                 </div>
-                <Link to="/contact" className="btn-primary" onClick={() => setSelected(null)}>
+                <Link href="/contact" className="btn-primary" onClick={() => setSelected(null)}>
                   Discuss a Similar Project <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

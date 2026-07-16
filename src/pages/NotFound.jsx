@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { ArrowLeft, Home } from 'lucide-react'
 
 export default function NotFound() {
@@ -16,10 +16,10 @@ export default function NotFound() {
             The page may have moved or the address may be incorrect. Let&apos;s get you back to the website.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link to="/" className="btn-primary">
+            <Link href="/" className="btn-primary">
               <Home className="w-4 h-4" /> Go to homepage
             </Link>
-            <Link to="/contact" className="btn-secondary">
+            <Link href="/contact" className="btn-secondary">
               <ArrowLeft className="w-4 h-4" /> Contact us
             </Link>
           </div>

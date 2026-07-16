@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, usePage } from '@inertiajs/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import { navLinks } from '../../data'
@@ -23,9 +23,10 @@ function NexasamLogo({ size = 36, solid = false }) {
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const location = useLocation()
+  const { url } = usePage()
+  const pathname = url.split('?')[0]
 
-  const isHeroPage = location.pathname === '/'
+  const isHeroPage = pathname === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -33,7 +34,7 @@ export default function Navbar({ theme, toggleTheme }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => { setMobileOpen(false) }, [location])
+  useEffect(() => { setMobileOpen(false) }, [url])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -60,7 +61,7 @@ export default function Navbar({ theme, toggleTheme }) {
         <div className="container-max px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-2 group">
               <div className="group-hover:scale-105 transition-transform">
                 <NexasamLogo size={38} solid={showSolid} />
               </div>
@@ -89,10 +90,10 @@ export default function Navbar({ theme, toggleTheme }) {
               {navLinks.map(link => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   className={clsx(
                     'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
-                    location.pathname === link.path
+                    pathname === link.path
                       ? 'text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950'
                       : showSolid
                         ? 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -132,7 +133,7 @@ export default function Navbar({ theme, toggleTheme }) {
               </button>
 
               <Link
-                to="/contact"
+                href="/contact"
                 className="hidden md:inline-flex btn-primary text-sm"
               >
                 Get Started
@@ -174,7 +175,7 @@ export default function Navbar({ theme, toggleTheme }) {
               className="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white dark:bg-gray-950 shadow-2xl md:hidden flex flex-col"
             >
               <div className="flex items-center justify-between p-6 border-b border-gray-100 dark:border-gray-800">
-                <Link to="/" className="flex items-center gap-2">
+                <Link href="/" className="flex items-center gap-2">
                   <NexasamLogo size={32} solid={true} />
                   <div className="flex flex-col leading-none">
                     <span className="font-display font-bold text-lg text-gray-900 dark:text-white">
@@ -202,10 +203,10 @@ export default function Navbar({ theme, toggleTheme }) {
                     transition={{ delay: i * 0.05 }}
                   >
                     <Link
-                      to={link.path}
+                      href={link.path}
                       className={clsx(
                         'flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-all',
-                        location.pathname === link.path
+                        pathname === link.path
                           ? 'text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950'
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                       )}
@@ -217,7 +218,7 @@ export default function Navbar({ theme, toggleTheme }) {
               </nav>
 
               <div className="p-6 border-t border-gray-100 dark:border-gray-800">
-                <Link to="/contact" className="btn-primary w-full justify-center">
+                <Link href="/contact" className="btn-primary w-full justify-center">
                   Get Started
                 </Link>
               </div>

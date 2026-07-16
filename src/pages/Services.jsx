@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { ArrowRight, Globe, Smartphone, Palette, Layers, ShoppingCart, Zap, Brain, Briefcase, CheckCircle2 } from 'lucide-react'
 import { services } from '../data'
 import CTABanner from '../components/home/CTABanner'
@@ -66,7 +66,7 @@ export default function Services() {
                         </div>
                       ))}
                     </div>
-                    <Link to="/contact" className="btn-primary">
+                    <Link href="/contact" className="btn-primary">
                       Discuss Your Project <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { projects } from '../../data'
 import SectionHeader from '../ui/SectionHeader'
@@ -83,7 +83,7 @@ export default function FeaturedProjects() {
           viewport={viewport}
           className="text-center mt-12"
         >
-          <Link to="/portfolio" className="btn-secondary">
+          <Link href="/portfolio" className="btn-secondary">
             View All Projects <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

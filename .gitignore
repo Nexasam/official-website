@@ -1,13 +1,30 @@
 # Dependencies
 node_modules/
+vendor/
 
 # Build output
-# dist/
+dist/
+public/build/
+public/hot
+
+# Laravel runtime
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+/storage/*.key
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
 
 # Local env files
 .env
 .env.local
 .env.*.local
+.phpunit.result.cache
 
 # Vite
 *.local

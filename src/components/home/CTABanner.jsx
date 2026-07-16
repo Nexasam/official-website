@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { ArrowRight, Calendar } from 'lucide-react'
 import { staggerContainer, fadeUp, easeOut, viewport } from '../../utils/animations'
 
@@ -55,13 +55,13 @@ export default function CTABanner() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-brand-700 font-bold text-base hover:bg-gray-50 active:scale-95 transition-all shadow-xl"
               >
                 Start Your Project <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white/10 border border-white/20 text-white font-semibold text-base hover:bg-white/20 active:scale-95 transition-all backdrop-blur-sm"
               >
                 <Calendar className="w-5 h-5" /> Book a Free Call

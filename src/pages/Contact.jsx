@@ -1,15 +1,9 @@
 import { useState } from 'react'
+import { Head, router, usePage } from '@inertiajs/react'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, MessageSquare } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
-
-// ─── Web3Forms config ─────────────────────────────────────────────────────────
-// 1. Go to https://web3forms.com
-// 2. Enter your email (info@nexasam.com) and click "Create Access Key"
-// 3. Check your inbox, copy the access key and paste it below
-const WEB3FORMS_ACCESS_KEY = '119d7d50-8306-4cb0-bb61-1ddd2efa04cb'
-// ─────────────────────────────────────────────────────────────────────────────
 
 const services = [
   'Web Development', 'Mobile App', 'UI/UX Design', 'SaaS Development',
@@ -21,39 +15,32 @@ const budgets = ['$100 – $1k', '$1k – $5k', '$5k – $10k', '$10k – $25k',
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [sendError, setSendError] = useState(false)
-  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { errors: serverErrors } = usePage().props
+  const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = async (data) => {
+  const onSubmit = (data) => {
     setSendError(false)
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `New Project Inquiry from ${data.firstName} ${data.lastName}`,
-          from_name: `${data.firstName} ${data.lastName}`,
-          email: data.email,
-          company: data.company || 'N/A',
-          service: data.service,
-          budget: data.budget || 'Not specified',
-          message: data.message,
-        }),
-      })
-      const result = await res.json()
-      if (result.success) {
+    setIsSubmitting(true)
+
+    router.post('/contact', data, {
+      preserveScroll: true,
+      onSuccess: () => {
         setSubmitted(true)
-      } else {
+      },
+      onError: () => {
         setSendError(true)
-      }
-    } catch (err) {
-      console.error('Web3Forms error:', err)
-      setSendError(true)
-    }
+      },
+      onFinish: () => setIsSubmitting(false),
+    })
   }
 
   return (
-    <main className="pt-20">
+    <>
+      <Head title="Contact">
+        <meta name="description" content="Tell Nexasam Technologies about your software project and get a clear path forward from our team in Ibadan, Nigeria." />
+      </Head>
+      <main className="pt-20">
       <PageHero
         label="Get In Touch"
         title={<>Let's Build Something <span className="gradient-text">Great</span></>}
@@ -251,7 +238,7 @@ export default function Contact() {
                       {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
                     </div>
 
-                    {sendError && (
+                    {(sendError || Object.keys(serverErrors || {}).length > 0) && (
                       <p className="text-red-500 text-sm text-center bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-xl px-4 py-3">
                         Something went wrong. Please try again or email us directly at{' '}
                         <a href="mailto:info@nexasam.com" className="underline">info@nexasam.com</a>.
@@ -281,6 +268,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   )
 }

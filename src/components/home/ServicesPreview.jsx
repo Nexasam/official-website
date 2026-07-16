@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { ArrowRight, Globe, Smartphone, Palette, Layers, ShoppingCart, Cloud, Brain, Briefcase } from 'lucide-react'
 import { services } from '../../data'
 import SectionHeader from '../ui/SectionHeader'
@@ -47,7 +47,7 @@ export default function ServicesPreview() {
                   {service.shortDesc}
                 </p>
                 <Link
-                  to="/services"
+                  href="/services"
                   className="inline-flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-400 group-hover:gap-2 transition-all duration-200"
                 >
                   Learn more <ArrowRight className="w-4 h-4" />
@@ -64,7 +64,7 @@ export default function ServicesPreview() {
           viewport={viewport}
           className="text-center mt-12"
         >
-          <Link to="/services" className="btn-secondary">
+          <Link href="/services" className="btn-secondary">
             View All Services <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>

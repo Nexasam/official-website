@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import { ArrowRight, Play, Star, ChevronDown } from 'lucide-react'
 import { easeOut } from '../../utils/animations'
 
@@ -79,13 +79,13 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
             >
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl gradient-bg text-white font-semibold text-base shadow-glow active:scale-95 transition-all duration-200"
               >
                 Start Your Project <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                to="/portfolio"
+                href="/portfolio"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl
                   bg-gray-100 border border-gray-200 text-gray-800 font-semibold text-base
                   dark:bg-white/5 dark:border-white/10 dark:text-white

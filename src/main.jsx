@@ -1,34 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import { createInertiaApp } from '@inertiajs/react'
+import { createRoot } from 'react-dom/client'
+import SiteLayout from './components/layout/SiteLayout.jsx'
 import './index.css'
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { hasError: false, error: null }
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error }
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div style={{ padding: '2rem', fontFamily: 'monospace', color: 'red' }}>
-          <h2>Something went wrong:</h2>
-          <pre style={{ whiteSpace: 'pre-wrap' }}>{this.state.error?.toString()}</pre>
-          <pre style={{ whiteSpace: 'pre-wrap' }}>{this.state.error?.stack}</pre>
-        </div>
-      )
-    }
-    return this.props.children
-  }
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
-  </React.StrictMode>,
-)
+createInertiaApp({
+  title: title => title ? `${title} | Nexasam Technologies` : 'Nexasam Technologies',
+  resolve: async name => {
+    const pages = import.meta.glob('./pages/**/*.jsx')
+    const page = await pages[`./pages/${name}.jsx`]()
+    page.default.layout ??= page => <SiteLayout>{page}</SiteLayout>
+    return page
+  },
+  setup({ el, App, props }) {
+    createRoot(el).render(<App {...props} />)
+  },
+  progress: {
+    color: '#0042ff',
+  },
+})
