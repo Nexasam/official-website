@@ -4,8 +4,8 @@ vendor/
 
 # Build output
 dist/
-public/build/
-public/hot
+# public/build/
+# public/hot
 
 # Laravel runtime
 /bootstrap/cache/*

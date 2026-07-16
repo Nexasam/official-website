@@ -1,0 +1,153 @@
+{
+  "_CTABanner-ODdFEvom.js": {
+    "file": "assets/CTABanner-ODdFEvom.js",
+    "name": "CTABanner",
+    "imports": [
+      "src/main.jsx",
+      "_animations-B3sPDwEY.js"
+    ]
+  },
+  "_PageHero-WwXl5rvw.js": {
+    "file": "assets/PageHero-WwXl5rvw.js",
+    "name": "PageHero",
+    "imports": [
+      "src/main.jsx",
+      "_animations-B3sPDwEY.js"
+    ]
+  },
+  "_SectionHeader-C_pslMIM.js": {
+    "file": "assets/SectionHeader-C_pslMIM.js",
+    "name": "SectionHeader",
+    "imports": [
+      "src/main.jsx",
+      "_animations-B3sPDwEY.js"
+    ]
+  },
+  "_animations-B3sPDwEY.js": {
+    "file": "assets/animations-B3sPDwEY.js",
+    "name": "animations"
+  },
+  "_circle-check-CppQwGRL.js": {
+    "file": "assets/circle-check-CppQwGRL.js",
+    "name": "circle-check",
+    "imports": [
+      "src/main.jsx"
+    ]
+  },
+  "_clock-C9Lraw6y.js": {
+    "file": "assets/clock-C9Lraw6y.js",
+    "name": "clock",
+    "imports": [
+      "src/main.jsx"
+    ]
+  },
+  "_external-link-wYD8Hm1q.js": {
+    "file": "assets/external-link-wYD8Hm1q.js",
+    "name": "external-link",
+    "imports": [
+      "src/main.jsx"
+    ]
+  },
+  "_zap-4BhLZNxZ.js": {
+    "file": "assets/zap-4BhLZNxZ.js",
+    "name": "zap",
+    "imports": [
+      "src/main.jsx"
+    ]
+  },
+  "src/main.jsx": {
+    "file": "assets/main-DdYe_fCN.js",
+    "name": "main",
+    "src": "src/main.jsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/pages/About.jsx",
+      "src/pages/Contact.jsx",
+      "src/pages/Home.jsx",
+      "src/pages/NotFound.jsx",
+      "src/pages/Portfolio.jsx",
+      "src/pages/Services.jsx"
+    ],
+    "css": [
+      "assets/main-BPvCIlfp.css"
+    ]
+  },
+  "src/pages/About.jsx": {
+    "file": "assets/About-BwRLVi8b.js",
+    "name": "About",
+    "src": "src/pages/About.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.jsx",
+      "_SectionHeader-C_pslMIM.js",
+      "_CTABanner-ODdFEvom.js",
+      "_PageHero-WwXl5rvw.js",
+      "_circle-check-CppQwGRL.js",
+      "_animations-B3sPDwEY.js"
+    ]
+  },
+  "src/pages/Contact.jsx": {
+    "file": "assets/Contact-DbwiZgyz.js",
+    "name": "Contact",
+    "src": "src/pages/Contact.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.jsx",
+      "_PageHero-WwXl5rvw.js",
+      "_clock-C9Lraw6y.js",
+      "_circle-check-CppQwGRL.js",
+      "_animations-B3sPDwEY.js"
+    ]
+  },
+  "src/pages/Home.jsx": {
+    "file": "assets/Home-b2FsgvKU.js",
+    "name": "Home",
+    "src": "src/pages/Home.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.jsx",
+      "_animations-B3sPDwEY.js",
+      "_CTABanner-ODdFEvom.js",
+      "_SectionHeader-C_pslMIM.js",
+      "_zap-4BhLZNxZ.js",
+      "_clock-C9Lraw6y.js",
+      "_external-link-wYD8Hm1q.js"
+    ]
+  },
+  "src/pages/NotFound.jsx": {
+    "file": "assets/NotFound-EXguwwjj.js",
+    "name": "NotFound",
+    "src": "src/pages/NotFound.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.jsx"
+    ]
+  },
+  "src/pages/Portfolio.jsx": {
+    "file": "assets/Portfolio-zIYFR9Jq.js",
+    "name": "Portfolio",
+    "src": "src/pages/Portfolio.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.jsx",
+      "_CTABanner-ODdFEvom.js",
+      "_PageHero-WwXl5rvw.js",
+      "_external-link-wYD8Hm1q.js",
+      "_animations-B3sPDwEY.js"
+    ]
+  },
+  "src/pages/Services.jsx": {
+    "file": "assets/Services-whhGnpY8.js",
+    "name": "Services",
+    "src": "src/pages/Services.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.jsx",
+      "_CTABanner-ODdFEvom.js",
+      "_PageHero-WwXl5rvw.js",
+      "_zap-4BhLZNxZ.js",
+      "_circle-check-CppQwGRL.js",
+      "_animations-B3sPDwEY.js"
+    ]
+  }
+}
