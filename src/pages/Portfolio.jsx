@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ExternalLink, ArrowRight } from 'lucide-react'
 import { projects } from '../data'
@@ -143,9 +144,9 @@ export default function Portfolio() {
                     </div>
                   ))}
                 </div>
-                <a href="#" className="btn-primary">
-                  View Case Study <ArrowRight className="w-4 h-4" />
-                </a>
+                <Link to="/contact" className="btn-primary" onClick={() => setSelected(null)}>
+                  Discuss a Similar Project <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </motion.div>
           </>

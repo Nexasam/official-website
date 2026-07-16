@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import { Twitter, Linkedin, Github, Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
 
 const footerLinks = {
   Company: [
     { label: 'About Us', path: '/about' },
-    { label: 'Careers', path: '/careers' },
     { label: 'Contact', path: '/contact' },
   ],
   Services: [
@@ -136,21 +135,12 @@ export default function Footer() {
           <p className="text-xs text-gray-400 dark:text-gray-500">
             © {new Date().getFullYear()} Nexasam Technologies. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            <a href="#" aria-label="Twitter" className="text-gray-400 dark:text-gray-500 hover:text-brand-600 dark:hover:text-white transition-colors">
-              <Twitter className="w-4 h-4" />
-            </a>
-            <a href="#" aria-label="LinkedIn" className="text-gray-400 dark:text-gray-500 hover:text-brand-600 dark:hover:text-white transition-colors">
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a href="#" aria-label="GitHub" className="text-gray-400 dark:text-gray-500 hover:text-brand-600 dark:hover:text-white transition-colors">
-              <Github className="w-4 h-4" />
-            </a>
-          </div>
-          <div className="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500">
-            <a href="#" className="hover:text-brand-600 dark:hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-600 dark:hover:text-white transition-colors">Terms of Service</a>
-          </div>
+          <a
+            href="mailto:info@nexasam.com"
+            className="text-xs text-gray-400 dark:text-gray-500 hover:text-brand-600 dark:hover:text-white transition-colors"
+          >
+            info@nexasam.com
+          </a>
         </div>
       </div>
     </footer>

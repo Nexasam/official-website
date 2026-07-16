@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, Calendar, MessageSquare, Linkedin, Twitter, Github } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, MessageSquare } from 'lucide-react'
 import PageHero from '../components/layout/PageHero'
 
 // ─── Web3Forms config ─────────────────────────────────────────────────────────
@@ -79,7 +79,7 @@ export default function Contact() {
                 {[
                   { icon: Mail, label: 'Email', value: 'info@nexasam.com', href: 'mailto:info@nexasam.com' },
                   { icon: Phone, label: 'Phone', value: '08168509044', href: 'tel:+2348168509044' },
-                  { icon: MapPin, label: 'Office', value: '24, Idi-Osan Street, Opp. Maku Afrika Hotel, Gberemu, Ibadan, Oyo State', href: '#' },
+                  { icon: MapPin, label: 'Office', value: '24, Idi-Osan Street, Opp. Maku Afrika Hotel, Gberemu, Ibadan, Oyo State', href: 'https://maps.google.com/?q=Idi-Osan+Street,+Gberemu,+Ibadan,+Oyo+State,+Nigeria' },
                   { icon: Clock, label: 'Hours', value: 'Mon–Fri, 9am–5pm WAT', href: null },
                 ].map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-4">
@@ -98,42 +98,6 @@ export default function Contact() {
                     </div>
                   </div>
                 ))}
-              </div>
-
-              {/* Calendly CTA */}
-              <div className="card p-6 bg-gradient-to-br from-brand-50 to-brand-100 dark:from-brand-950/50 dark:to-brand-900/50 border-brand-100 dark:border-brand-900">
-                <Calendar className="w-8 h-8 text-brand-600 dark:text-brand-400 mb-3" />
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Book a Free Strategy Call</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                  30 minutes with our team. No sales pitch — just honest advice.
-                </p>
-                <a
-                  href="#"
-                  className="btn-primary text-sm w-full justify-center"
-                >
-                  <Calendar className="w-4 h-4" /> Schedule on Calendly
-                </a>
-              </div>
-
-              {/* Social */}
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Follow us</p>
-                <div className="flex gap-3">
-                  {[
-                    { icon: Twitter, label: 'Twitter', href: '#' },
-                    { icon: Linkedin, label: 'LinkedIn', href: '#' },
-                    { icon: Github, label: 'GitHub', href: '#' },
-                  ].map(({ icon: Icon, label, href }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      aria-label={label}
-                      className="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition-all"
-                    >
-                      <Icon className="w-4 h-4" />
-                    </a>
-                  ))}
-                </div>
               </div>
 
               {/* Map */}
