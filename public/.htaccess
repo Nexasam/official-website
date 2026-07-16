@@ -1,5 +1,13 @@
 Options -MultiViews
 
+# Namecheap/cPanel may otherwise serve Vite assets as application/octet-stream.
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType application/json .json
+  AddType image/svg+xml .svg
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
